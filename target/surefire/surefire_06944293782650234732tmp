@@ -1,0 +1,6 @@
+#surefire_0
+#Thu Dec 19 21:49:34 GMT 2013
+user.dir=/Users/aburham/Documents/workspace-sts-3.3.0.RELEASE/com.which.acceptance.tests.demo
+localRepository=/Users/aburham/.m2/repository
+basedir=/Users/aburham/Documents/workspace-sts-3.3.0.RELEASE/com.which.acceptance.tests.demo
+test=ITLoginTest
