@@ -62,7 +62,7 @@ public class ITLoginStepDefs {
 	@Then("^I should be logged in$")
 	public void I_should_be_logged_in() throws Throwable {
 	    // Express the Regexp above with the code you wish you had
-		
+		System.out.println("Page title is: " + driver.getTitle());
 	    //throw new PendingException();
 	}
 }

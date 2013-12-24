@@ -63,7 +63,11 @@ public class WhichWebDriverFactory {
     public WebElement findElement(final By by) {
       return waitForElement(by);
     }
-
+    
+    public String getTitle() {   
+    	return driver.getTitle();
+      }
+    
     public List<WebElement> findElements(final By by) {
       return waitForElements(by);
     }
@@ -219,13 +223,13 @@ public class WhichWebDriverFactory {
     //profile.setAssumeUntrustedCertificateIssuer(true);
     
     
-    //Solution 3
+    /*Solution 3
     FirefoxBinary binary = new FirefoxBinary();  
     File firefoxProfileFolder = new File("/Users/aburham/Documents/workspace-sts-3.3.0.RELEASE/com.which.acceptance.tests.demo/firefoxProfile");
     //
     FirefoxProfile profile = new FirefoxProfile(firefoxProfileFolder);
     profile.setAcceptUntrustedCertificates(true);
-    //driver = new FirefoxDriver(profile);
+    ///driver = new FirefoxDriver(profile); */
     try { 
     DesiredCapabilities cap = DesiredCapabilities.firefox();
     //cap.setPlatform(Platform.MAC);
