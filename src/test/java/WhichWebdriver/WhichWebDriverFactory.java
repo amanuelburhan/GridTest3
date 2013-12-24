@@ -202,9 +202,18 @@ public class WhichWebDriverFactory {
 
   private static WebDriver createDriver()  {
     WebDriver driver = null;
+    String Xport = System.getProperty(
+            "lmportal.xvfb.id", ":55");
+    final File firefoxPath = new File(System.getProperty(
+            "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+    FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+    firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+    driver = new FirefoxDriver(firefoxBinary, null);
+    return driver;
+  }
+}
     
-    
-    
+/*    
     //Solution 1
     //
     //FirefoxProfile profile = new FirefoxProfile();
@@ -230,8 +239,8 @@ public class WhichWebDriverFactory {
     FirefoxProfile profile = new FirefoxProfile(firefoxProfileFolder);
     profile.setAcceptUntrustedCertificates(true);
     ///driver = new FirefoxDriver(profile); */
-    try { 
-    DesiredCapabilities cap = DesiredCapabilities.firefox();
+//    try { 
+ //   DesiredCapabilities cap = DesiredCapabilities.firefox();
     //cap.setPlatform(Platform.MAC);
     //cap.setBrowserName("firefox");
     //FirefoxBinary firefoxBinary = new FirefoxBinary();
@@ -247,13 +256,13 @@ public class WhichWebDriverFactory {
     firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
     */
     ///
-    String Xport = System.getProperty(
-            "lmportal.xvfb.id", ":55");
-    final File firefoxPath = new File(System.getProperty(
-            "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
-    FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
-    firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
-    driver = new FirefoxDriver(firefoxBinary, null);
+  //  String Xport = System.getProperty(
+  //          "lmportal.xvfb.id", ":55");
+ //   final File firefoxPath = new File(System.getProperty(
+//            "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+ //   FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+//    firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+ //   driver = new FirefoxDriver(firefoxBinary, null);
     
     //cap.setCapability("firefox_binary", "/opt/local/lib/firefox-x11/firefox-bin");    
     //cap.setCapability("firefox_binary.DISPLAY", "15");
@@ -274,18 +283,18 @@ public class WhichWebDriverFactory {
     
     *////************************/////
     //driver = new RemoteWebDriver(new URL("http://127.0.0.1:8989/selenium-server/driver/") , cap );
-    System.out.println("It works....I think");
-    return driver;
-    }
-    catch (Exception e) {
+//    System.out.println("It works....I think");
+ //   return driver;
+ //   }
+  /*  catch (Exception e) {
     	
 		  driver = new FirefoxDriver();
 		  driver =null;
 		  System.out.println("Samsung did not connect in createDriver");
 		  return driver;
 		  }
-  
+ / 
   }
    
 }
-
+*/
