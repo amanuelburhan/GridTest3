@@ -246,13 +246,21 @@ public class WhichWebDriverFactory {
     firefoxBinary = new FirefoxBinary(firefoxPath);
     firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
     */
+    ///
+    String Xport = System.getProperty(
+            "lmportal.xvfb.id", ":55");
+    final File firefoxPath = new File(System.getProperty(
+            "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+    FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
+    firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
+    driver = new FirefoxDriver(firefoxBinary, null);
     
     //cap.setCapability("firefox_binary", "/opt/local/lib/firefox-x11/firefox-bin");    
     //cap.setCapability("firefox_binary.DISPLAY", "15");
     //driver = new RemoteWebDriver(new URL("http://127.0.0.1:8080/wd/hub") , cap );
     
     
-    driver = new RemoteWebDriver(new URL("http://127.0.0.1:2000/wd/hub") , cap );
+    //driver = new RemoteWebDriver(new URL("http://127.0.0.1:2000/wd/hub") , cap );
     //driver = new RemoteWebDriver(new URL("http://10.178.201.122:4444/wd/hub") , cap );
     //driver = new RemoteWebDriver(new URL("http://5.79.21.8:4444/wd/hub") , cap );
     ///**********************
