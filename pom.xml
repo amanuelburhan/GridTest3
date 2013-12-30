@@ -2,15 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.which.acceptance.tests</groupId>
   <artifactId>com.which.acceptance.tests.demo</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  
-  		<parent>
-                <groupId>com.which</groupId>
-                <artifactId>which-super-pom</artifactId>
-                <version>1.4.4</version>
-        </parent>
-        
+  <version>0.0.1-SNAPSHOT</version>   
         
   <dependencies>
 		<dependency>
