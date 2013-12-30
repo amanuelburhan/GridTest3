@@ -205,7 +205,7 @@ public class WhichWebDriverFactory {
     String Xport = System.getProperty(
             "lmportal.xvfb.id", ":55");
     final File firefoxPath = new File(System.getProperty(
-            "lmportal.deploy.firefox.path", "/usr/bin/firefox"));
+            "lmportal.deploy.firefox.path", "usr/bin/firefox")); ///opt/local/lib/firefox-x11/firefox-bin ///usr/bin/firefox
     FirefoxBinary firefoxBinary = new FirefoxBinary(firefoxPath);
     firefoxBinary.setEnvironmentProperty("DISPLAY", Xport);
     driver = new FirefoxDriver(firefoxBinary, null);

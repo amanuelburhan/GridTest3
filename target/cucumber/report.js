@@ -39,9 +39,8 @@ formatter.match({
   "location": "ITLoginStepDefs.WhichLogin()"
 });
 formatter.result({
-  "duration": 84300693000,
-  "status": "failed",
-  "error_message": "java.lang.NullPointerException\n\tat WhichWebdriver.WhichWebDriverFactory$WhichWebDriver.get(WhichWebDriverFactory.java:124)\n\tat com.sashimi.login.ITLoginStepDefs.WhichLogin(ITLoginStepDefs.java:31)\n\tat ✽.Given I am on the homepage(com/sashimi/login/login.feature:6)\n"
+  "duration": 23126349000,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -57,12 +56,14 @@ formatter.match({
   "location": "ITLoginStepDefs.I_enter_in_my_login_credentials_and(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 140890000,
+  "status": "passed"
 });
 formatter.match({
   "location": "ITLoginStepDefs.I_should_be_logged_in()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1861689000,
+  "status": "passed"
 });
 });
