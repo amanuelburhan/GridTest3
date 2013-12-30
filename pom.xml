@@ -4,6 +4,14 @@
   <artifactId>com.which.acceptance.tests.demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  
+  		<parent>
+                <groupId>com.which</groupId>
+                <artifactId>which-super-pom</artifactId>
+                <version>1.4.4</version>
+        </parent>
+        
+        
   <dependencies>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
