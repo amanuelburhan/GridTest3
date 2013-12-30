@@ -50,6 +50,8 @@
 			<version>1.6.6</version>
 			<scope>runtime</scope>
 		</dependency>
+	</dependencies>
+	
 		
 		<build>
         <plugins>
@@ -71,9 +73,7 @@
             
         </plugins>
     </build>
-			
-
-	</dependencies>
+	
 	
 	<properties>
 		<skipTests>true</skipTests>
